@@ -1,0 +1,39 @@
+{
+  "id": "com.yourcompany.deliverygrp",
+  "version": "1.0.0",
+  "name": "Delivery Plan Agrupado",
+  "description": "Tabla de entregas agrupada por material con coloreado condicional e icono de alerta para multiples pedidos en el mismo mes.",
+  "newInstancePrefix": "DeliveryGrp",
+  "vendor": "Your Company",
+  "license": "",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "com-yourcompany-deliverygrp",
+      "url": "https://andreola545.github.io/SAC/delivery_plan_grouped_widget.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {
+    "width":  { "type": "integer", "default": 900 },
+    "height": { "type": "integer", "default": 400 }
+  },
+  "methods": {},
+  "events": {},
+  "dataBindings": {
+    "myDataBinding": {
+      "feeds": [
+        { "id": "feed_material",  "description": "Material (SKU)",              "type": "dimension" },
+        { "id": "feed_molecule",  "description": "Molécula / Molecule-API",      "type": "dimension" },
+        { "id": "feed_country",   "description": "País / Country",               "type": "dimension" },
+        { "id": "feed_vendor",    "description": "Vendor / CMO",                 "type": "dimension" },
+        { "id": "feed_planner",   "description": "Planner / MRP Controller",     "type": "dimension" },
+        { "id": "feed_yearmonth", "description": "Calendar Year/Month",          "type": "dimension" },
+        { "id": "feed_cod_texto", "description": "Codigo Texto (0-4)",           "type": "dimension" },
+        { "id": "feed_cod_fondo", "description": "Codigo Fondo (2=frozen,3=plan,4=restriccion)", "type": "dimension" },
+        { "id": "feed_qty",       "description": "Quantity",                     "type": "mainStructureMember" }
+      ]
+    }
+  }
+}
