@@ -1,0 +1,44 @@
+{
+  "id": "com.yourcompany.modelcodes",
+  "version": "1.1.0",
+  "name": "Model Codes Delivery View",
+  "description": "Tabla de entregas con coloreado de texto y fondo segun Codigo Texto y Codigo Fondo.",
+  "newInstancePrefix": "ModelCodes",
+  "vendor": "Your Company",
+  "license": "",
+  "webcomponents": [
+    {
+      "kind": "main",
+      "tag": "com-yourcompany-modelcodes",
+      "url": "https://andreola545.github.io/SAC/model_codes_widget.js",
+      "integrity": "",
+      "ignoreIntegrity": true
+    }
+  ],
+  "properties": {
+    "width": {
+      "type": "integer",
+      "default": 800
+    },
+    "height": {
+      "type": "integer",
+      "default": 400
+    }
+  },
+  "methods": {},
+  "events": {},
+  "dataBindings": {
+    "myDataBinding": {
+      "feeds": [
+        { "id": "feed_material",  "description": "Material dimension",              "type": "dimension"         },
+        { "id": "feed_fecha",     "description": "Fecha Entrega dimension",         "type": "dimension"         },
+        { "id": "feed_docdate",   "description": "Document Date dimension",         "type": "dimension"         },
+        { "id": "feed_frozen",    "description": "Frozen End dimension",            "type": "dimension"         },
+        { "id": "feed_yearmonth", "description": "Calendar Year/Month dimension",   "type": "dimension"         },
+        { "id": "feed_cod_texto", "description": "Codigo Texto (1=rojo,2=azul,3=verde)", "type": "dimension"   },
+        { "id": "feed_cod_fondo", "description": "Codigo Fondo (2=gris,4=rojo)",   "type": "dimension"         },
+        { "id": "feed_qty",       "description": "Quantity measure",                "type": "mainStructureMember" }
+      ]
+    }
+  }
+}
